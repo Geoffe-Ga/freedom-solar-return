@@ -42,6 +42,13 @@
     "booking_tip": "Wednesday/Tuesday nights tend to be cheapest. Thursday is typically the most expensive. July is peak summer — book early.",
     "loyalty": "Marriott Bonvoy",
     "source": "https://www.kayak.com/New-Orleans-Hotels-W-New-Orleans---French-Quarter.63260.ksp",
+    "booking": {
+      "platform": "Marriott",
+      "book_url": "https://www.marriott.com/reservation/rateListMenu.mi?propertyCode=MSYRF&defaultTab=standard&flexibleDates=false&fromDate=07/12/2026&toDate=07/18/2026",
+      "type": "reservation_required",
+      "status": "unknown",
+      "last_checked": null
+    },
     "notes": "Only 97 rooms — intimate boutique feel. Jewel-toned bayou-inspired decor. Steps from Jackson Square & Bourbon St. The included Voodoo/Haunted History tour is a perfect fit for Freedom's aesthetic. Walkable location negates the need for a car."
   },
   "activities": [
@@ -64,6 +71,13 @@
       "wildlife": "American Alligators, Bald Eagles, Raccoons, Wild Boar, Turtles, Snakes, Spanish Moss draped Live Oaks",
       "cancellation": "Free cancellation up to 24 hours in advance",
       "source": "https://ragincajunairboattours.com/tours/airboat-tours-new-orleans",
+      "booking": {
+        "platform": "FareHarbor",
+        "book_url": "https://ragincajunairboattours.com/tours/airboat-tours-new-orleans",
+        "type": "reservation_required",
+        "status": "unknown",
+        "last_checked": null
+      },
       "notes": "100% private property tour deep in Louisiana swamps. July is prime gator season — sightings very likely. Weather-dependent with refund/reschedule policy."
     },
     {
@@ -90,6 +104,12 @@
       ],
       "fun_fact": "Visitors who faint receive a free t-shirt: 'I passed out at the Museum of Death...and lived to talk about it'",
       "source": "https://www.museumofdeath.net/museum-of-death-new-orleans",
+      "booking": {
+        "platform": "none",
+        "type": "walk_in",
+        "status": "always_open",
+        "note": "Walk-in only. No advance tickets. Open 7 days."
+      },
       "notes": "U-shaped gallery path through intimately packed rooms. Plan 45–60 min. Go early on a weekday (Mon–Wed) to avoid lines."
     }
   ],
@@ -112,6 +132,7 @@
       },
       "description": "Oddities shop and collective of visual and taxidermy artists. Supports emerging and established local/regional artists from the Gulf Coast.",
       "source": "https://www.yelp.com/biz/dark-matter-oddities-and-artisan-collective-new-orleans",
+      "booking": { "platform": "none", "type": "walk_in", "status": "always_open", "note": "Walk-in. Closed Tuesdays (verify)." },
       "notes": "Steps from Jackson Square. Small but curated – a must for oddity lovers."
     },
     {
@@ -130,6 +151,7 @@
       "psychic_readings": "Daily noon–10 PM (later on Fri/Sat). Sign up early on busy days.",
       "description": "Voodoo museum and shop since 1978. Voodoo altar, spiritual items, books, and artifacts from around the world.",
       "source": "https://voodooneworleans.com/",
+      "booking": { "platform": "none", "type": "walk_in", "status": "always_open", "note": "Walk-in. Tarot readings first-come ($50/20min), arrive early." },
       "notes": "Recently moved from 739 to 628 Bourbon St. Arrive early for tarot readings."
     },
     {
@@ -142,6 +164,7 @@
       "description": "The only brick-and-mortar vampire shop in America. Custom-made fangs by fangsmith Maven Lore, coffin-shaped backpacks, Famous Fortune Candles (handmade with hidden pewter charms), vampire dolls, capes, Vampire Wine & Vodka, VampFire Hot Sauce, skull sugar cubes, and one-of-a-kind curiosities. Run by Marita Jaeger, the 'Queen of New Orleans Vampires,' since 2003.",
       "extras": "Photo op in a standing coffin. Adjacent Vampire Café with mythology-inspired cocktails.",
       "source": "https://www.tripadvisor.com/Attraction_Review-g60864-d1138441-Reviews-Boutique_du_Vampyre-New_Orleans_Louisiana.html",
+      "booking": { "platform": "none", "type": "walk_in", "status": "always_open", "note": "Walk-in. Open daily 10 AM – 9 PM. Also the gateway to Potions Lounge." },
       "notes": "This is also the gateway to Potions Lounge speakeasy — staff here whisper the password. Ranked #1 in its category on TripAdvisor. Staff (especially Steven) receive exceptional praise."
     }
   ],
@@ -172,6 +195,16 @@
       ],
       "extras": "Custom fang fittings and tarot readings on premises. Courtyard garden herbs used in dishes.",
       "source": "https://vampireapothecary.com/new-orleans-french-quarter-vampire-apothecary-food-menu",
+      "booking": {
+        "platform": "Resy",
+        "book_url": "https://resy.com/cities/new-orleans-la/venues/vampire-apothecary?date=2026-07-12&seats=2",
+        "resy_slug": "vampire-apothecary",
+        "resy_city": "new-orleans-la",
+        "type": "reservation_recommended",
+        "status": "unknown",
+        "last_checked": null,
+        "slots": []
+      },
       "notes": "Connected to Boutique du Vampyre. Herbs and flowers from their own courtyard garden. Many dishes have medicinal properties."
     },
     {
@@ -200,6 +233,13 @@
       "dress_code": "Nice casual. No sleeveless shirts or cut-off shorts.",
       "reservations": "Recommended, especially for courtyard seating. Book online.",
       "source": "https://www.courtoftwosisters.com/menus/jazz-brunch/",
+      "booking": {
+        "platform": "Tock",
+        "book_url": "https://www.exploretock.com/thecourtoftwosisters/search?date=2026-07-12&size=2&time=10:00",
+        "type": "reservation_recommended",
+        "status": "unknown",
+        "last_checked": null
+      },
       "notes": "Historic French Quarter courtyard. Live jazz trio plays throughout brunch. A NOLA institution."
     }
   ],
@@ -218,6 +258,12 @@
       "vibe": "1930s Paris-style bar with balcony overlooking Bourbon Street. Vampire owned and operated.",
       "membership": "Available – includes unlimited free entry, guest privileges, private party access (4–8 PM), VIP event access.",
       "source": "https://www.potionslounge.com/the-speakeasy",
+      "booking": {
+        "platform": "none",
+        "type": "walk_in",
+        "status": "always_open",
+        "note": "Walk-in only. Get password at Boutique du Vampyre. $10–$20 cover."
+      },
       "notes": "The password ritual through Boutique du Vampyre is part of the experience. Go early for a chill vibe, later for energy."
     },
     {
@@ -235,6 +281,12 @@
       "tip": "Go in the afternoon to snag a carousel seat. Evenings and weekends get packed.",
       "hotel_guest_perk": "Exclusive early entry at 10 AM (1 hour before public opening).",
       "source": "https://hotelmonteleone.com/entertainment/carousel-bar/",
+      "booking": {
+        "platform": "none",
+        "type": "walk_in",
+        "status": "always_open",
+        "note": "No reservations accepted. First-come, first-served. Go in the afternoon for best shot at a carousel seat."
+      },
       "notes": "Open to all – no hotel stay required. A NOLA landmark and literary haunt (Hemingway, Faulkner, Tennessee Williams were regulars)."
     }
   ]

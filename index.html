@@ -366,6 +366,106 @@
       color: var(--accent-primary);
     }
 
+    /* ─── AVAILABILITY & BOOKING ─── */
+    .booking-bar {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-radius: 10px;
+      background: rgba(10, 5, 18, 0.6);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .booking-bar__status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+
+    .booking-bar__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .booking-bar__dot--green { background: #4ade80; box-shadow: 0 0 8px rgba(74, 222, 128, 0.5); }
+    .booking-bar__dot--yellow { background: #facc15; box-shadow: 0 0 8px rgba(250, 204, 21, 0.4); }
+    .booking-bar__dot--red { background: #f87171; box-shadow: 0 0 8px rgba(248, 113, 113, 0.5); }
+    .booking-bar__dot--gray { background: #6b7280; }
+
+    .booking-bar__label {
+      color: var(--text-secondary);
+    }
+
+    .booking-bar__platform {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-left: 2px;
+    }
+
+    .booking-bar__checked {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .booking-bar__btn {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-primary);
+      color: var(--accent-primary);
+      background: transparent;
+      text-decoration: none;
+      transition: all 0.25s;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .booking-bar__btn:hover {
+      background: var(--accent-primary);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(155, 77, 202, 0.3);
+    }
+
+    .booking-bar__btn--walkin {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .booking-bar__btn--walkin:hover {
+      background: var(--accent-gold);
+      color: #0a0512;
+    }
+
+    .booking-bar__slots {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .booking-bar__slot {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      color: #4ade80;
+    }
+
     /* ─── HOTEL PERKS ─── */
     .perks {
       display: flex;
@@ -591,6 +691,68 @@
       return `<div class="card__note">${esc(note)}</div>`;
     }
 
+    function renderBooking(booking) {
+      if (!booking) return '';
+
+      const isWalkIn = booking.type === 'walk_in';
+      const status = booking.status || 'unknown';
+
+      // Determine dot color
+      let dotClass = 'gray';
+      let statusLabel = 'Status unknown';
+      if (isWalkIn || status === 'always_open') {
+        dotClass = 'green';
+        statusLabel = booking.note || 'Walk-in — no reservation needed';
+      } else if (status === 'available') {
+        dotClass = 'green';
+        statusLabel = 'Availability confirmed';
+      } else if (status === 'limited') {
+        dotClass = 'yellow';
+        statusLabel = 'Limited availability';
+      } else if (status === 'unavailable') {
+        dotClass = 'red';
+        statusLabel = 'No availability found';
+      } else {
+        statusLabel = 'Check availability below';
+      }
+
+      const platform = booking.platform && booking.platform !== 'none'
+        ? `<span class="booking-bar__platform">via ${esc(booking.platform)}</span>`
+        : '';
+
+      const lastChecked = booking.last_checked
+        ? `<span class="booking-bar__checked">Last checked: ${new Date(booking.last_checked).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'short', timeStyle: 'short' })}</span>`
+        : '';
+
+      // Button
+      let btnHtml = '';
+      if (booking.book_url) {
+        btnHtml = `<a href="${esc(booking.book_url)}" target="_blank" rel="noopener" class="booking-bar__btn">Check Availability</a>`;
+      } else if (isWalkIn) {
+        btnHtml = `<span class="booking-bar__btn booking-bar__btn--walkin">Walk-In</span>`;
+      }
+
+      // Slots (for Resy)
+      let slotsHtml = '';
+      if (booking.slots && booking.slots.length > 0) {
+        slotsHtml = `<div class="booking-bar__slots">${booking.slots.map(s => `<span class="booking-bar__slot">${esc(s)}</span>`).join('')}</div>`;
+      }
+
+      return `
+        <div class="booking-bar">
+          <div class="booking-bar__status">
+            <span class="booking-bar__dot booking-bar__dot--${dotClass}"></span>
+            <div>
+              <span class="booking-bar__label">${statusLabel}</span>
+              ${platform}
+              ${lastChecked}
+            </div>
+          </div>
+          ${btnHtml}
+        </div>
+        ${slotsHtml}`;
+    }
+
     function renderSource(url) {
       if (!url) return '';
       const short = url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
@@ -639,6 +801,7 @@
 
           ${renderList('Room Types', hotel.room_types)}
           ${renderList('Included Perks', hotel.perks)}
+          ${renderBooking(hotel.booking)}
           ${renderNote(hotel.notes)}
           ${renderSource(hotel.source)}
         </div>
@@ -675,6 +838,7 @@
             ${renderList('Boat Options', a.boat_options)}
             ${renderList('Exhibits', a.exhibits)}
             ${a.fun_fact ? renderNote(a.fun_fact) : ''}
+            ${renderBooking(a.booking)}
             ${a.restrictions ? renderNote('⚠️ ' + a.restrictions) : ''}
             ${renderNote(a.notes)}
             ${renderSource(a.source)}
@@ -716,6 +880,7 @@
             </div>
             ${hoursHtml}
             ${s.description ? `<p style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;">${esc(s.description)}</p>` : ''}
+            ${renderBooking(s.booking)}
             ${s.extras ? renderNote(s.extras) : ''}
             ${renderNote(s.notes)}
             ${renderSource(s.source)}
@@ -753,6 +918,7 @@
             ${renderList('Menu Highlights', r.menu_highlights)}
             ${renderList('Drinks', r.drink_highlights)}
             ${renderList('Included', r.includes)}
+            ${renderBooking(r.booking)}
             ${r.extras ? renderNote(r.extras) : ''}
             ${renderNote(r.notes)}
             ${renderSource(r.source)}
@@ -791,6 +957,7 @@
               ${v.how_to_enter ? renderDetail('🗝️', 'How to Enter', v.how_to_enter) : ''}
             </div>
             ${v.description ? `<p style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;">${esc(v.description)}</p>` : ''}
+            ${renderBooking(v.booking)}
             ${v.vibe ? renderNote('Vibe: ' + v.vibe) : ''}
             ${renderNote(v.notes)}
             ${v.tip ? renderNote('💡 ' + v.tip) : ''}
