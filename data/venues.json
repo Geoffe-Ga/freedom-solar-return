@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "last_updated": "2026-03-27T00:00:00-08:00",
+    "trip_dates": "July 12–18, 2026",
+    "birthday": "July 28, 2026",
+    "destination": "New Orleans, Louisiana",
+    "honoree": "Freedom"
+  },
+  "hotel": {
+    "name": "Hotel de la Poste – French Quarter, A Renaissance Hotel",
+    "url": "https://www.marriott.com/en-us/hotels/msyrf-hotel-de-la-poste-french-quarter-a-renaissance-hotel/overview/",
+    "address": "316 Chartres St, New Orleans, LA 70130",
+    "phone": "(504) 598-9500",
+    "price_range": "$215–$438/night",
+    "resort_fee": "$30/night destination fee",
+    "perks": [
+      "$30 daily food & beverage credit",
+      "Daily city tours for 2 (French Quarter, Garden District, Voodoo/Haunted History, Beignet package)",
+      "Sazerac House tour & tasting for 2"
+    ],
+    "check_in": "4:00 PM",
+    "check_out": "11:00 AM",
+    "booking_tip": "Wednesday/Tuesday nights tend to be cheapest. Thursday is typically the most expensive.",
+    "loyalty": "Marriott Bonvoy",
+    "source": "https://www.kayak.com/New-Orleans-Hotels-W-New-Orleans---French-Quarter.63260.ksp",
+    "notes": "Located in the heart of the French Quarter. The included Voodoo/Haunted History tour is a perfect fit for Freedom's aesthetic."
+  },
+  "activities": [
+    {
+      "name": "Ragin' Cajun Airboat Tours",
+      "category": "Adventure",
+      "url": "https://ragincajunairboattours.com/",
+      "address": "10090 Hwy 90, Luling, LA 70070",
+      "phone": "(504) 436-8000",
+      "price": "$165–$175 (Combo Tour: 6-seat Airboat + Plantation Tour, includes shuttle)",
+      "duration": "1.5–2 hours",
+      "hours": "Daily, multiple departures (arrive 15 min early)",
+      "boat_options": [
+        "Premium Small (6 passengers) – most intimate",
+        "Standard (up to 10 passengers)",
+        "Large (up to 16 passengers)"
+      ],
+      "includes": "Hotel shuttle to/from French Quarter (25 min ride)",
+      "restrictions": "No children under 5, pregnant women, or individuals with serious medical conditions",
+      "wildlife": "American Alligators, Bald Eagles, Raccoons, Wild Boar, Turtles, Snakes, Spanish Moss draped Live Oaks",
+      "source": "https://ragincajunairboattours.com/tours/airboat-tours-new-orleans",
+      "notes": "100% private property tour deep in Louisiana swamps. Weather-dependent with refund/reschedule policy."
+    },
+    {
+      "name": "Museum of Death",
+      "category": "Museum",
+      "url": "https://museumofdeath.bigcartel.com/",
+      "website": "https://www.museumofdeath.net/museum-of-death-new-orleans",
+      "address": "227 Dauphine St, New Orleans, LA 70112",
+      "phone": "(504) 593-3968",
+      "price": "$20/person",
+      "hours": "10:00 AM – 6:00 PM, 7 days a week",
+      "closed": "Thanksgiving, Christmas Day, Mardi Gras Day",
+      "duration": "~1 hour",
+      "payment": "Cashless only (credit/debit/tap). No advance/online tickets – in person only.",
+      "restrictions": "No photography. Mature audiences only.",
+      "source": "https://www.museumofdeath.net/museum-of-death-new-orleans",
+      "notes": "Go early on a weekday (Mon–Wed) to avoid lines. Weekend lines can stretch down the block."
+    }
+  ],
+  "shopping": [
+    {
+      "name": "Dark Matter Oddities & Artisan Collective",
+      "url": "https://www.yelp.com/biz/dark-matter-oddities-and-artisan-collective-new-orleans",
+      "website": "https://www.etsy.com/shop/DarkMatterOddities",
+      "address": "822 Chartres St, New Orleans, LA 70116",
+      "email": "dark.matter.oddities.nola@gmail.com",
+      "price": "Free to browse",
+      "hours": {
+        "Sunday": "11 AM – 7 PM",
+        "Monday": "12 PM – 6 PM",
+        "Tuesday": "Closed (verify)",
+        "Wednesday": "12 PM – 6 PM",
+        "Thursday": "12 PM – 6 PM",
+        "Friday": "11 AM – 7 PM",
+        "Saturday": "11 AM – 7 PM"
+      },
+      "description": "Oddities shop and collective of visual and taxidermy artists. Supports emerging and established local/regional artists from the Gulf Coast.",
+      "source": "https://www.yelp.com/biz/dark-matter-oddities-and-artisan-collective-new-orleans",
+      "notes": "Steps from Jackson Square. Small but curated – a must for oddity lovers."
+    },
+    {
+      "name": "Marie Laveau's House of Voodoo",
+      "url": "https://www.yelp.com/biz/marie-laveau-house-of-voodoo-new-orleans",
+      "website": "https://voodooneworleans.com/",
+      "address": "628 Bourbon St, New Orleans, LA 70130",
+      "phone": "(504) 581-3751",
+      "price": "Free to browse | $50 for 20-min tarot reading",
+      "hours": {
+        "Mon–Thu": "10 AM – 11:30 PM",
+        "Friday": "10 AM – 11 PM",
+        "Saturday": "10 AM – 1:30 AM",
+        "Sunday": "10 AM – 11:30 PM"
+      },
+      "psychic_readings": "Daily noon–10 PM (later on Fri/Sat). Sign up early on busy days.",
+      "description": "Voodoo museum and shop since 1978. Voodoo altar, spiritual items, books, and artifacts from around the world.",
+      "source": "https://voodooneworleans.com/",
+      "notes": "Recently moved from 739 to 628 Bourbon St. Arrive early for tarot readings."
+    },
+    {
+      "name": "Boutique du Vampyre",
+      "url": "https://www.feelthebite.com/",
+      "address": "709½ St. Ann St, New Orleans, LA 70116",
+      "phone": "(504) 561-8267",
+      "price": "Free to browse",
+      "description": "The only brick-and-mortar vampire shop in America. Custom-made fangs, coffin-shaped backpacks, vampire dolls, spell-casting items, capes, jewelry, and curiosities. Run by Marita Jaeger, the 'Queen of New Orleans Vampires,' since 2003.",
+      "source": "https://www.tripadvisor.com/Attraction_Review-g60864-d1138441-Reviews-Boutique_du_Vampyre-New_Orleans_Louisiana.html",
+      "notes": "This is also the gateway to Potions Lounge speakeasy — staff here whisper the password."
+    }
+  ],
+  "dining": [
+    {
+      "name": "Vampire Apothecary",
+      "category": "Themed Dining & Cocktails",
+      "url": "https://vampireapothecary.com/new-orleans-french-quarter-vampire-apothecary-food-menu",
+      "drink_menu_url": "https://vampireapothecary.com/new-orleans-french-quarter-vampire-apothecary-drink-menu",
+      "address": "725 St Peter St, New Orleans, LA 70116",
+      "phone": "(504) 766-8179",
+      "hours": "11:00 AM – 2:00 AM, 7 days",
+      "price_range": "$$–$$$",
+      "menu_highlights": [
+        "Crab Toast (3pc) – lump crab, red peppers, Apothecary sauce, bowfin caviar on sourdough",
+        "Beef Short Rib Po'Boy – slow-cooked short ribs, Provolone, garlic aioli on French bread",
+        "Tofu Bowl – marinated tofu, Brussels sprouts, coconut curry aioli (GF, VEG)",
+        "Grilled Cheese – Provolone on brioche, tomato, truffle oil",
+        "Brownie with hazelnut praline filling & chocolate mirror glaze",
+        "Pumpkin spice cheesecake with speculoos crust & salted caramel"
+      ],
+      "drink_highlights": [
+        "Absinthe – first distilled in NOLA since 1912 ban, infused with hibiscus (lush red)",
+        "Fangria – vampire sangria",
+        "Aphrodisiac Bloody Mary – Vampire Vodka with fresh oyster",
+        "Vampyre Vodka Pomegranate Lemonade",
+        "Cheese boards: 2 cheeses $12, 4 cheeses $24"
+      ],
+      "extras": "Custom fang fittings and tarot readings on premises. Courtyard garden herbs used in dishes.",
+      "source": "https://vampireapothecary.com/new-orleans-french-quarter-vampire-apothecary-food-menu",
+      "notes": "Connected to Boutique du Vampyre. Herbs and flowers from their own courtyard garden. Many dishes have medicinal properties."
+    },
+    {
+      "name": "The Court of Two Sisters – Jazz Brunch",
+      "category": "Jazz Brunch Buffet",
+      "url": "https://www.courtoftwosisters.com/menus/jazz-brunch",
+      "address": "613 Royal St, New Orleans, LA 70130",
+      "phone": "(504) 522-7261",
+      "hours": "9:00 AM – 3:00 PM daily",
+      "price": "$51/person (children 4 & under free with paying adult)",
+      "includes": [
+        "60+ item buffet",
+        "Coffee, iced tea, or water",
+        "1 complimentary glass of wine, champagne, or mimosa",
+        "Guaranteed seating",
+        "Gratuities and local taxes included"
+      ],
+      "menu_highlights": [
+        "Create-your-own omelette bar (9–11:30 AM)",
+        "Carving Station: Breakfast Ham (9–11 AM), Ribeye (11 AM–3 PM)",
+        "Chicken & sausage gumbo",
+        "Turtle soup au sherry",
+        "Red beans & rice",
+        "Bananas Foster, bread pudding, pecan pie"
+      ],
+      "dress_code": "Nice casual. No sleeveless shirts or cut-off shorts.",
+      "reservations": "Recommended, especially for courtyard seating. Book online.",
+      "source": "https://www.courtoftwosisters.com/menus/jazz-brunch/",
+      "notes": "Historic French Quarter courtyard. Live jazz trio plays throughout brunch. A NOLA institution."
+    }
+  ],
+  "nightlife": [
+    {
+      "name": "Potions Lounge – The Speakeasy",
+      "category": "Speakeasy / Vampire Bar",
+      "url": "https://www.potionslounge.com/the-speakeasy",
+      "address": "733 Bourbon St, New Orleans, LA 70116",
+      "phone": "(504) 717-3057",
+      "email": "Potionslounge@yahoo.com",
+      "hours": "5:00 PM – 1:00 AM, 7 days",
+      "cover": "$10 (may increase to $20 later in the evening)",
+      "how_to_enter": "Visit Boutique du Vampyre at 709½ St. Ann St first. Browse the shop, and a vampire staff member will whisper the password and secret location.",
+      "specialties": "Absinthe, craft cocktails, tarot readings, magic shows",
+      "vibe": "1930s Paris-style bar with balcony overlooking Bourbon Street. Vampire owned and operated.",
+      "membership": "Available – includes unlimited free entry, guest privileges, private party access (4–8 PM), VIP event access.",
+      "source": "https://www.potionslounge.com/the-speakeasy",
+      "notes": "The password ritual through Boutique du Vampyre is part of the experience. Go early for a chill vibe, later for energy."
+    },
+    {
+      "name": "The Carousel Bar & Lounge",
+      "category": "Historic Cocktail Bar",
+      "url": "https://hotelmonteleone.com/entertainment/carousel-bar/",
+      "address": "214 Royal St, New Orleans, LA 70130 (inside Hotel Monteleone)",
+      "phone": "(504) 523-3341",
+      "hours": "11:00 AM – 12:00 AM daily",
+      "cover": "Free",
+      "reservations": "Not accepted. First-come, first-served. Only 25 carousel seats.",
+      "dress_code": "No formal dress code. Suggested: casual date night.",
+      "live_music": "Wednesday through Saturday",
+      "description": "The only revolving bar in New Orleans. The carousel makes one full rotation every 15 minutes while you sip world-class cocktails.",
+      "tip": "Go in the afternoon to snag a carousel seat. Evenings and weekends get packed.",
+      "hotel_guest_perk": "Exclusive early entry at 10 AM (1 hour before public opening).",
+      "source": "https://hotelmonteleone.com/entertainment/carousel-bar/",
+      "notes": "Open to all – no hotel stay required. A NOLA landmark and literary haunt (Hemingway, Faulkner, Tennessee Williams were regulars)."
+    }
+  ]
+}

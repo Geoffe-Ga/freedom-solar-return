@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freedom's Solar Return ☽ New Orleans 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0a0a0f;
+      --bg-card: #111118;
+      --bg-card-hover: #19192a;
+      --border: #2a1a3a;
+      --border-glow: #6b2fa0;
+      --accent-primary: #9b4dca;
+      --accent-rose: #c44569;
+      --accent-crimson: #8b1a1a;
+      --accent-gold: #c9a96e;
+      --text-primary: #e8e0f0;
+      --text-secondary: #a098b0;
+      --text-muted: #6a6280;
+      --shadow-glow: 0 0 30px rgba(155, 77, 202, 0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 18px;
+      min-height: 100vh;
+    }
+
+    /* Starfield background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.3), transparent),
+        radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,0.15), transparent),
+        radial-gradient(1.5px 1.5px at 10% 80%, rgba(155,77,202,0.4), transparent),
+        radial-gradient(1.5px 1.5px at 90% 10%, rgba(196,69,105,0.3), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(1px 1px at 30% 10%, rgba(255,255,255,0.2), transparent),
+        radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.15), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ambient glow */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(107, 47, 160, 0.06) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(139, 26, 26, 0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      position: relative;
+    }
+
+    .hero__moon {
+      font-size: 64px;
+      display: block;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 20px rgba(201, 169, 110, 0.4));
+    }
+
+    .hero__title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-primary), var(--accent-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .hero__subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: var(--text-secondary);
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero__dates {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 32px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.1em;
+      background: rgba(201, 169, 110, 0.03);
+    }
+
+    .hero__dates .sep {
+      color: var(--text-muted);
+    }
+
+    .hero__bday {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ─── SECTION ─── */
+    .section {
+      margin-bottom: 64px;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section__icon {
+      font-size: 28px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(155, 77, 202, 0.08);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .section__title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.04em;
+    }
+
+    .section__subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'Cinzel', serif;
+    }
+
+    /* ─── VENUE CARD ─── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-rose), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-glow);
+      background: var(--bg-card-hover);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card__name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .card__name a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .card__name a:hover {
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .card__badge {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      padding: 4px 14px;
+      border-radius: 999px;
+      background: rgba(155, 77, 202, 0.12);
+      border: 1px solid var(--border);
+      color: var(--accent-primary);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .card__price {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .card__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card__detail {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .card__detail-icon {
+      color: var(--accent-primary);
+      font-size: 14px;
+      margin-top: 4px;
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+    }
+
+    .card__detail-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'Cinzel', serif;
+      display: block;
+    }
+
+    .card__detail-value {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .card__highlights {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(42, 26, 58, 0.5);
+    }
+
+    .card__highlights-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .card__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 6px;
+    }
+
+    .card__list li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .card__list li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--accent-rose);
+      font-size: 8px;
+      top: 6px;
+    }
+
+    .card__note {
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: rgba(155, 77, 202, 0.05);
+      border-left: 3px solid var(--accent-primary);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .card__source {
+      margin-top: 12px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .card__source a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .card__source a:hover {
+      color: var(--accent-primary);
+    }
+
+    /* ─── HOTEL PERKS ─── */
+    .perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .perk {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(201, 169, 110, 0.08);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      color: var(--accent-gold);
+      font-family: 'Cinzel', serif;
+    }
+
+    /* ─── HOURS TABLE ─── */
+    .hours-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px 16px;
+      font-size: 0.9rem;
+    }
+
+    .hours-grid dt {
+      color: var(--text-muted);
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+    }
+
+    .hours-grid dd {
+      color: var(--text-secondary);
+    }
+
+    /* ─── STATUS BAR ─── */
+    .status-bar {
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .status-bar__text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.06em;
+    }
+
+    .status-bar__time {
+      color: var(--accent-primary);
+    }
+
+    .status-bar__healthy {
+      color: #4a9;
+    }
+
+    .status-bar__unhealthy {
+      color: var(--accent-crimson);
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .footer__ornament {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: block;
+      opacity: 0.5;
+    }
+
+    .footer a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      .card { padding: 20px; }
+      .card__header { flex-direction: column; }
+      .card__grid { grid-template-columns: 1fr; }
+      .card__list { grid-template-columns: 1fr; }
+      .hero { padding: 48px 16px 40px; }
+      .section__header { flex-direction: column; gap: 8px; }
+    }
+
+    /* ─── LOADING ─── */
+    .loading {
+      display: flex;
+      justify-content: center;
+      padding: 80px 0;
+    }
+
+    .loading__spinner {
+      width: 40px;
+      height: 40px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent-primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+    }
+
+    .nav__inner {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav__link {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav__link:hover {
+      color: var(--accent-gold);
+      border-color: var(--border);
+      background: rgba(201, 169, 110, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#hotel" class="nav__link">Lodging</a>
+      <a href="#activities" class="nav__link">Activities</a>
+      <a href="#shopping" class="nav__link">Shopping</a>
+      <a href="#dining" class="nav__link">Dining</a>
+      <a href="#nightlife" class="nav__link">Nightlife</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <span class="hero__moon">🌙</span>
+    <h1 class="hero__title">Freedom's Solar Return</h1>
+    <p class="hero__subtitle">New Orleans, Louisiana</p>
+    <div class="hero__dates">
+      <span>July 12 – 18, 2026</span>
+      <span class="sep">|</span>
+      <span>French Quarter</span>
+    </div>
+    <p class="hero__bday">Actual birthday: July 28th</p>
+  </header>
+
+  <main class="container" id="app">
+    <div class="loading">
+      <div class="loading__spinner"></div>
+    </div>
+  </main>
+
+  <script>
+    const DATA_URL = 'data/venues.json';
+
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str || '';
+      return d.innerHTML;
+    }
+
+    function renderDetail(icon, label, value) {
+      if (!value) return '';
+      return `
+        <div class="card__detail">
+          <span class="card__detail-icon">${icon}</span>
+          <div>
+            <span class="card__detail-label">${esc(label)}</span>
+            <span class="card__detail-value">${esc(value)}</span>
+          </div>
+        </div>`;
+    }
+
+    function renderList(title, items) {
+      if (!items || items.length === 0) return '';
+      return `
+        <div class="card__highlights">
+          <div class="card__highlights-title">${esc(title)}</div>
+          <ul class="card__list">
+            ${items.map(i => `<li>${esc(i)}</li>`).join('')}
+          </ul>
+        </div>`;
+    }
+
+    function renderNote(note) {
+      if (!note) return '';
+      return `<div class="card__note">${esc(note)}</div>`;
+    }
+
+    function renderSource(url) {
+      if (!url) return '';
+      const short = url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+      const display = short.length > 60 ? short.substring(0, 57) + '...' : short;
+      return `<div class="card__source">Source: <a href="${esc(url)}" target="_blank" rel="noopener">${esc(display)}</a></div>`;
+    }
+
+    function renderHotel(hotel) {
+      const hours = hotel.hours;
+      const hoursStr = hours
+        ? Object.entries(hours).map(([d, h]) => `<dt>${esc(d)}</dt><dd>${esc(h)}</dd>`).join('')
+        : '';
+
+      return `
+      <section class="section" id="hotel">
+        <div class="section__header">
+          <div class="section__icon">🏨</div>
+          <div>
+            <h2 class="section__title">Lodging</h2>
+            <p class="section__subtitle">Where we rest our coffins</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <h3 class="card__name">
+              <a href="${esc(hotel.url)}" target="_blank" rel="noopener">${esc(hotel.name)}</a>
+            </h3>
+            <span class="card__badge">${esc(hotel.loyalty || 'Hotel')}</span>
+          </div>
+
+          <div class="card__price">${esc(hotel.price_range)}</div>
+
+          <div class="card__grid">
+            ${renderDetail('📍', 'Address', hotel.address)}
+            ${renderDetail('📞', 'Phone', hotel.phone)}
+            ${renderDetail('🔑', 'Check-in', hotel.check_in)}
+            ${renderDetail('🚪', 'Check-out', hotel.check_out)}
+            ${renderDetail('💰', 'Resort Fee', hotel.resort_fee)}
+            ${renderDetail('💡', 'Tip', hotel.booking_tip)}
+          </div>
+
+          ${renderList('Included Perks', hotel.perks)}
+          ${renderNote(hotel.notes)}
+          ${renderSource(hotel.source)}
+        </div>
+      </section>`;
+    }
+
+    function renderActivities(activities) {
+      return `
+      <section class="section" id="activities">
+        <div class="section__header">
+          <div class="section__icon">🐊</div>
+          <div>
+            <h2 class="section__title">Activities</h2>
+            <p class="section__subtitle">Adventures for the daring</p>
+          </div>
+        </div>
+        ${activities.map(a => `
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__name">
+                <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)}</a>
+              </h3>
+              <span class="card__badge">${esc(a.category)}</span>
+            </div>
+            <div class="card__price">${esc(a.price)}</div>
+            <div class="card__grid">
+              ${renderDetail('📍', 'Address', a.address)}
+              ${renderDetail('📞', 'Phone', a.phone)}
+              ${renderDetail('🕐', 'Hours', a.hours)}
+              ${renderDetail('⏱️', 'Duration', a.duration)}
+              ${renderDetail('🚐', 'Transport', a.includes)}
+              ${renderDetail('💳', 'Payment', a.payment)}
+            </div>
+            ${renderList('Boat Options', a.boat_options)}
+            ${a.restrictions ? renderNote('⚠️ ' + a.restrictions) : ''}
+            ${renderNote(a.notes)}
+            ${renderSource(a.source)}
+          </div>
+        `).join('')}
+      </section>`;
+    }
+
+    function renderShopping(shops) {
+      return `
+      <section class="section" id="shopping">
+        <div class="section__header">
+          <div class="section__icon">🦇</div>
+          <div>
+            <h2 class="section__title">Shopping</h2>
+            <p class="section__subtitle">Oddities, voodoo &amp; vampyre relics</p>
+          </div>
+        </div>
+        ${shops.map(s => {
+          let hoursHtml = '';
+          if (s.hours && typeof s.hours === 'object') {
+            hoursHtml = `<div class="card__grid"><div class="card__detail"><span class="card__detail-icon">🕐</span><div><span class="card__detail-label">Hours</span><dl class="hours-grid">${Object.entries(s.hours).map(([d, h]) => `<dt>${esc(d)}</dt><dd>${esc(h)}</dd>`).join('')}</dl></div></div></div>`;
+          }
+          return `
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__name">
+                <a href="${esc(s.website || s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>
+              </h3>
+            </div>
+            <div class="card__price">${esc(s.price)}</div>
+            <div class="card__grid">
+              ${renderDetail('📍', 'Address', s.address)}
+              ${renderDetail('📞', 'Phone', s.phone)}
+              ${renderDetail('✉️', 'Email', s.email)}
+              ${s.psychic_readings ? renderDetail('🔮', 'Readings', s.psychic_readings) : ''}
+            </div>
+            ${hoursHtml}
+            ${s.description ? `<p style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;">${esc(s.description)}</p>` : ''}
+            ${renderNote(s.notes)}
+            ${renderSource(s.source)}
+          </div>`;
+        }).join('')}
+      </section>`;
+    }
+
+    function renderDining(restaurants) {
+      return `
+      <section class="section" id="dining">
+        <div class="section__header">
+          <div class="section__icon">🍷</div>
+          <div>
+            <h2 class="section__title">Dining</h2>
+            <p class="section__subtitle">Feasts for creatures of the night</p>
+          </div>
+        </div>
+        ${restaurants.map(r => `
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__name">
+                <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>
+              </h3>
+              <span class="card__badge">${esc(r.category)}</span>
+            </div>
+            <div class="card__price">${esc(r.price || r.price_range || '')}</div>
+            <div class="card__grid">
+              ${renderDetail('📍', 'Address', r.address)}
+              ${renderDetail('📞', 'Phone', r.phone)}
+              ${renderDetail('🕐', 'Hours', r.hours)}
+              ${renderDetail('👗', 'Dress Code', r.dress_code)}
+              ${renderDetail('📋', 'Reservations', r.reservations)}
+            </div>
+            ${renderList('Menu Highlights', r.menu_highlights)}
+            ${renderList('Drinks', r.drink_highlights)}
+            ${renderList('Included', r.includes)}
+            ${r.extras ? renderNote(r.extras) : ''}
+            ${renderNote(r.notes)}
+            ${renderSource(r.source)}
+          </div>
+        `).join('')}
+      </section>`;
+    }
+
+    function renderNightlife(venues) {
+      return `
+      <section class="section" id="nightlife">
+        <div class="section__header">
+          <div class="section__icon">🌙</div>
+          <div>
+            <h2 class="section__title">Nightlife</h2>
+            <p class="section__subtitle">After dark, the real magic begins</p>
+          </div>
+        </div>
+        ${venues.map(v => `
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__name">
+                <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.name)}</a>
+              </h3>
+              <span class="card__badge">${esc(v.category)}</span>
+            </div>
+            ${v.cover ? `<div class="card__price">Cover: ${esc(v.cover)}</div>` : '<div class="card__price">No Cover</div>'}
+            <div class="card__grid">
+              ${renderDetail('📍', 'Address', v.address)}
+              ${renderDetail('📞', 'Phone', v.phone)}
+              ${renderDetail('🕐', 'Hours', v.hours)}
+              ${renderDetail('👗', 'Dress Code', v.dress_code)}
+              ${renderDetail('🎵', 'Live Music', v.live_music)}
+              ${renderDetail('🎫', 'Reservations', v.reservations)}
+              ${renderDetail('🍸', 'Specialties', v.specialties)}
+              ${v.how_to_enter ? renderDetail('🗝️', 'How to Enter', v.how_to_enter) : ''}
+            </div>
+            ${v.description ? `<p style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;">${esc(v.description)}</p>` : ''}
+            ${v.vibe ? renderNote('Vibe: ' + v.vibe) : ''}
+            ${renderNote(v.notes)}
+            ${v.tip ? renderNote('💡 ' + v.tip) : ''}
+            ${renderSource(v.source)}
+          </div>
+        `).join('')}
+      </section>`;
+    }
+
+    function renderStatusBar(meta) {
+      const updated = meta.last_updated
+        ? new Date(meta.last_updated).toLocaleString('en-US', {
+            timeZone: 'America/Los_Angeles',
+            dateStyle: 'long',
+            timeStyle: 'short'
+          })
+        : 'Unknown';
+
+      const health = meta.health_check;
+      let healthHtml = '';
+      if (health) {
+        const cls = health.all_ok ? 'status-bar__healthy' : 'status-bar__unhealthy';
+        const label = health.all_ok ? 'All venues reachable' : 'Some venues unreachable';
+        healthHtml = ` · <span class="${cls}">${label}</span>`;
+      }
+
+      return `
+      <div class="status-bar">
+        <p class="status-bar__text">
+          Last refreshed: <span class="status-bar__time">${esc(updated)}</span>${healthHtml}
+        </p>
+        <p class="status-bar__text" style="margin-top:4px;font-size:0.7rem;">
+          Auto-refreshes daily at midnight PST via GitHub Actions
+        </p>
+      </div>`;
+    }
+
+    async function init() {
+      const app = document.getElementById('app');
+      try {
+        const resp = await fetch(DATA_URL);
+        const data = await resp.json();
+
+        let html = '';
+        if (data.hotel) html += renderHotel(data.hotel);
+        if (data.activities) html += renderActivities(data.activities);
+        if (data.shopping) html += renderShopping(data.shopping);
+        if (data.dining) html += renderDining(data.dining);
+        if (data.nightlife) html += renderNightlife(data.nightlife);
+        html += renderStatusBar(data.meta);
+
+        app.innerHTML = html;
+      } catch (err) {
+        app.innerHTML = `
+          <div style="text-align:center;padding:80px 24px;color:var(--accent-rose);">
+            <p style="font-family:'Cinzel',serif;font-size:1.2rem;">Failed to load venue data</p>
+            <p style="margin-top:8px;color:var(--text-muted);font-size:0.9rem;">${esc(err.message)}</p>
+          </div>`;
+      }
+    }
+
+    init();
+  </script>
+
+  <footer class="footer">
+    <span class="footer__ornament">☽ ◆ ☾</span>
+    <p>Made with darkness &amp; devotion for Freedom's Solar Return</p>
+    <p style="margin-top:8px;">
+      <a href="https://github.com/geoffe-ga/freedom-solar-return" target="_blank" rel="noopener">View on GitHub</a>
+    </p>
+  </footer>
+</body>
+</html>

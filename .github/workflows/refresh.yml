@@ -1,0 +1,38 @@
+name: "🌙 Refresh Venue Data"
+
+on:
+  schedule:
+    # Midnight PST = 08:00 UTC
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run venue refresher
+        run: python scripts/refresh.py
+        continue-on-error: true
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/venues.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🌙 Auto-refresh venue data $(date -u +%Y-%m-%d)"
+            git push
+          fi
