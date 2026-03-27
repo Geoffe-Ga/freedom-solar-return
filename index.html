@@ -673,6 +673,8 @@
               ${renderDetail('💳', 'Payment', a.payment)}
             </div>
             ${renderList('Boat Options', a.boat_options)}
+            ${renderList('Exhibits', a.exhibits)}
+            ${a.fun_fact ? renderNote(a.fun_fact) : ''}
             ${a.restrictions ? renderNote('⚠️ ' + a.restrictions) : ''}
             ${renderNote(a.notes)}
             ${renderSource(a.source)}
@@ -695,6 +697,8 @@
           let hoursHtml = '';
           if (s.hours && typeof s.hours === 'object') {
             hoursHtml = `<div class="card__grid"><div class="card__detail"><span class="card__detail-icon">🕐</span><div><span class="card__detail-label">Hours</span><dl class="hours-grid">${Object.entries(s.hours).map(([d, h]) => `<dt>${esc(d)}</dt><dd>${esc(h)}</dd>`).join('')}</dl></div></div></div>`;
+          } else if (s.hours && typeof s.hours === 'string') {
+            hoursHtml = renderDetail('🕐', 'Hours', s.hours);
           }
           return `
           <div class="card">
@@ -712,6 +716,7 @@
             </div>
             ${hoursHtml}
             ${s.description ? `<p style="margin-top:12px;color:var(--text-secondary);font-size:0.95rem;">${esc(s.description)}</p>` : ''}
+            ${s.extras ? renderNote(s.extras) : ''}
             ${renderNote(s.notes)}
             ${renderSource(s.source)}
           </div>`;

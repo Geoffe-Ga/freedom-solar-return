@@ -51,7 +51,7 @@
       "url": "https://ragincajunairboattours.com/",
       "address": "10090 Hwy 90, Luling, LA 70070",
       "phone": "(504) 436-8000",
-      "price": "$165–$175 (Combo Tour: 6-seat Airboat + Plantation Tour, includes shuttle)",
+      "price": "Small Airboat: $79 self-drive / $99 w/ hotel pickup | Large Airboat: $60 / $79 | Combo (Airboat + Plantation): $165–$175 w/ shuttle",
       "duration": "1.5–2 hours",
       "hours": "Daily, multiple departures (arrive 15 min early)",
       "boat_options": [
@@ -62,8 +62,9 @@
       "includes": "Hotel shuttle to/from French Quarter (25 min ride)",
       "restrictions": "No children under 5, pregnant women, or individuals with serious medical conditions",
       "wildlife": "American Alligators, Bald Eagles, Raccoons, Wild Boar, Turtles, Snakes, Spanish Moss draped Live Oaks",
+      "cancellation": "Free cancellation up to 24 hours in advance",
       "source": "https://ragincajunairboattours.com/tours/airboat-tours-new-orleans",
-      "notes": "100% private property tour deep in Louisiana swamps. Weather-dependent with refund/reschedule policy."
+      "notes": "100% private property tour deep in Louisiana swamps. July is prime gator season — sightings very likely. Weather-dependent with refund/reschedule policy."
     },
     {
       "name": "Museum of Death",
@@ -78,8 +79,18 @@
       "duration": "~1 hour",
       "payment": "Cashless only (credit/debit/tap). No advance/online tickets – in person only.",
       "restrictions": "No photography. Mature audiences only.",
+      "exhibits": [
+        "Serial Killer Room — letters & memorabilia (Bundy, Gacy, etc.)",
+        "Kevorkian Machine — original device with '60 Minutes' interview",
+        "Funeral & Embalming — Victorian mourning rings, face casts (Napoleon, Lincoln)",
+        "Taxidermy & Skeletons",
+        "Cannibalism Exhibit",
+        "Theater of Death — autopsy videos",
+        "Shrunken Heads & famous death exhibits"
+      ],
+      "fun_fact": "Visitors who faint receive a free t-shirt: 'I passed out at the Museum of Death...and lived to talk about it'",
       "source": "https://www.museumofdeath.net/museum-of-death-new-orleans",
-      "notes": "Go early on a weekday (Mon–Wed) to avoid lines. Weekend lines can stretch down the block."
+      "notes": "U-shaped gallery path through intimately packed rooms. Plan 45–60 min. Go early on a weekday (Mon–Wed) to avoid lines."
     }
   ],
   "shopping": [
@@ -127,9 +138,11 @@
       "address": "709½ St. Ann St, New Orleans, LA 70116",
       "phone": "(504) 561-8267",
       "price": "Free to browse",
-      "description": "The only brick-and-mortar vampire shop in America. Custom-made fangs, coffin-shaped backpacks, vampire dolls, spell-casting items, capes, jewelry, and curiosities. Run by Marita Jaeger, the 'Queen of New Orleans Vampires,' since 2003.",
+      "hours": "10:00 AM – 9:00 PM, 7 days",
+      "description": "The only brick-and-mortar vampire shop in America. Custom-made fangs by fangsmith Maven Lore, coffin-shaped backpacks, Famous Fortune Candles (handmade with hidden pewter charms), vampire dolls, capes, Vampire Wine & Vodka, VampFire Hot Sauce, skull sugar cubes, and one-of-a-kind curiosities. Run by Marita Jaeger, the 'Queen of New Orleans Vampires,' since 2003.",
+      "extras": "Photo op in a standing coffin. Adjacent Vampire Café with mythology-inspired cocktails.",
       "source": "https://www.tripadvisor.com/Attraction_Review-g60864-d1138441-Reviews-Boutique_du_Vampyre-New_Orleans_Louisiana.html",
-      "notes": "This is also the gateway to Potions Lounge speakeasy — staff here whisper the password."
+      "notes": "This is also the gateway to Potions Lounge speakeasy — staff here whisper the password. Ranked #1 in its category on TripAdvisor. Staff (especially Steven) receive exceptional praise."
     }
   ],
   "dining": [
