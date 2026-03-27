@@ -630,9 +630,14 @@
             ${renderDetail('🔑', 'Check-in', hotel.check_in)}
             ${renderDetail('🚪', 'Check-out', hotel.check_out)}
             ${renderDetail('💰', 'Resort Fee', hotel.resort_fee)}
+            ${renderDetail('🚗', 'Parking', hotel.parking)}
+            ${renderDetail('🏊', 'Pool', hotel.pool)}
+            ${renderDetail('🍽️', 'On-Site Dining', hotel.dining_onsite)}
+            ${renderDetail('🐾', 'Pet Policy', hotel.pet_policy)}
             ${renderDetail('💡', 'Tip', hotel.booking_tip)}
           </div>
 
+          ${renderList('Room Types', hotel.room_types)}
           ${renderList('Included Perks', hotel.perks)}
           ${renderNote(hotel.notes)}
           ${renderSource(hotel.source)}

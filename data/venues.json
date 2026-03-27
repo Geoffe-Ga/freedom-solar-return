@@ -10,9 +10,11 @@
     "name": "Hotel de la Poste – French Quarter, A Renaissance Hotel",
     "url": "https://www.marriott.com/en-us/hotels/msyrf-hotel-de-la-poste-french-quarter-a-renaissance-hotel/overview/",
     "address": "316 Chartres St, New Orleans, LA 70130",
-    "phone": "(504) 598-9500",
-    "price_range": "$215–$438/night",
-    "resort_fee": "$30/night destination fee",
+    "phone": "(504) 581-1200",
+    "star_rating": "4-Star (Upscale Renaissance brand)",
+    "total_rooms": 97,
+    "price_range": "$215–$438/night (July peak estimate: $250–$450+)",
+    "resort_fee": "$35.03/night destination fee",
     "perks": [
       "$30 daily food & beverage credit",
       "Daily city tours for 2 (French Quarter, Garden District, Voodoo/Haunted History, Beignet package)",
@@ -20,10 +22,27 @@
     ],
     "check_in": "4:00 PM",
     "check_out": "11:00 AM",
-    "booking_tip": "Wednesday/Tuesday nights tend to be cheapest. Thursday is typically the most expensive.",
+    "parking": "Valet only — $55/day standard, $65/day oversized (SUV+). 78\" height limit. No self-parking.",
+    "pool": "Heated outdoor pool, 9 AM – 10 PM. Brick courtyard with fountain & fire feature.",
+    "dining_onsite": "3rd Block Depot Kitchen+Bar — Southern Creole street food, breakfast/lunch/dinner",
+    "pet_policy": "Up to 2 pets (40 lbs max each), $150 non-refundable fee per stay",
+    "room_types": [
+      "Premier Room, 2 Queen Beds",
+      "Premier King Room",
+      "Expanded Room (courtyard or French Quarter views)",
+      "Carriage House Room (balcony/patio overlooking courtyard)",
+      "Suite with Private Balcony (French Quarter views)"
+    ],
+    "ratings": {
+      "Marriott": "4.0/5",
+      "TripAdvisor": "4.0/5",
+      "KAYAK": "8.1/10",
+      "Booking.com": "8.3/10"
+    },
+    "booking_tip": "Wednesday/Tuesday nights tend to be cheapest. Thursday is typically the most expensive. July is peak summer — book early.",
     "loyalty": "Marriott Bonvoy",
     "source": "https://www.kayak.com/New-Orleans-Hotels-W-New-Orleans---French-Quarter.63260.ksp",
-    "notes": "Located in the heart of the French Quarter. The included Voodoo/Haunted History tour is a perfect fit for Freedom's aesthetic."
+    "notes": "Only 97 rooms — intimate boutique feel. Jewel-toned bayou-inspired decor. Steps from Jackson Square & Bourbon St. The included Voodoo/Haunted History tour is a perfect fit for Freedom's aesthetic. Walkable location negates the need for a car."
   },
   "activities": [
     {
