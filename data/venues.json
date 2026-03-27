@@ -44,7 +44,7 @@
     "source": "https://www.kayak.com/New-Orleans-Hotels-W-New-Orleans---French-Quarter.63260.ksp",
     "booking": {
       "platform": "Marriott",
-      "book_url": "https://www.marriott.com/reservation/rateListMenu.mi?propertyCode=MSYRF&defaultTab=standard&flexibleDates=false&fromDate=07/12/2026&toDate=07/18/2026",
+      "book_url": "https://www.marriott.com/en-us/hotels/msyrf-hotel-de-la-poste-french-quarter-a-renaissance-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979159e88d&fromDate=2026-07-12&toDate=2026-07-18",
       "type": "reservation_required",
       "status": "unknown",
       "last_checked": null
