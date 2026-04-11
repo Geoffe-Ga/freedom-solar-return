@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Freedom's Solar Return ☽ New Orleans 2026</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
@@ -663,6 +666,12 @@
       return d.innerHTML;
     }
 
+    function safeHref(url) {
+      if (!url) return '';
+      if (/^https?:\/\//i.test(url)) return url;
+      return '';
+    }
+
     function renderDetail(icon, label, value) {
       if (!value) return '';
       return `
@@ -727,7 +736,7 @@
       // Button
       let btnHtml = '';
       if (booking.book_url) {
-        btnHtml = `<a href="${esc(booking.book_url)}" target="_blank" rel="noopener" class="booking-bar__btn">Check Availability</a>`;
+        btnHtml = safeHref(booking.book_url) ? `<a href="${esc(safeHref(booking.book_url))}" target="_blank" rel="noopener noreferrer" class="booking-bar__btn">Check Availability</a>` : '';
       } else if (isWalkIn) {
         btnHtml = `<span class="booking-bar__btn booking-bar__btn--walkin">Walk-In</span>`;
       }
@@ -743,7 +752,7 @@
           <div class="booking-bar__status">
             <span class="booking-bar__dot booking-bar__dot--${dotClass}"></span>
             <div>
-              <span class="booking-bar__label">${statusLabel}</span>
+              <span class="booking-bar__label">${esc(statusLabel)}</span>
               ${platform}
               ${lastChecked}
             </div>
@@ -757,7 +766,9 @@
       if (!url) return '';
       const short = url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
       const display = short.length > 60 ? short.substring(0, 57) + '...' : short;
-      return `<div class="card__source">Source: <a href="${esc(url)}" target="_blank" rel="noopener">${esc(display)}</a></div>`;
+      const href = safeHref(url);
+      if (!href) return '';
+      return `<div class="card__source">Source: <a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(display)}</a></div>`;
     }
 
     function renderHotel(hotel) {
@@ -779,7 +790,7 @@
         <div class="card">
           <div class="card__header">
             <h3 class="card__name">
-              <a href="${esc(hotel.url)}" target="_blank" rel="noopener">${esc(hotel.name)}</a>
+              <a href="${esc(safeHref(hotel.url))}" target="_blank" rel="noopener noreferrer">${esc(hotel.name)}</a>
             </h3>
             <span class="card__badge">${esc(hotel.loyalty || 'Hotel')}</span>
           </div>
@@ -822,7 +833,7 @@
           <div class="card">
             <div class="card__header">
               <h3 class="card__name">
-                <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.name)}</a>
+                <a href="${esc(safeHref(a.url))}" target="_blank" rel="noopener noreferrer">${esc(a.name)}</a>
               </h3>
               <span class="card__badge">${esc(a.category)}</span>
             </div>
@@ -868,7 +879,7 @@
           <div class="card">
             <div class="card__header">
               <h3 class="card__name">
-                <a href="${esc(s.website || s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>
+                <a href="${esc(safeHref(s.website || s.url))}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>
               </h3>
             </div>
             <div class="card__price">${esc(s.price)}</div>
@@ -903,7 +914,7 @@
           <div class="card">
             <div class="card__header">
               <h3 class="card__name">
-                <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a>
+                <a href="${esc(safeHref(r.url))}" target="_blank" rel="noopener noreferrer">${esc(r.name)}</a>
               </h3>
               <span class="card__badge">${esc(r.category)}</span>
             </div>
@@ -941,7 +952,7 @@
           <div class="card">
             <div class="card__header">
               <h3 class="card__name">
-                <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.name)}</a>
+                <a href="${esc(safeHref(v.url))}" target="_blank" rel="noopener noreferrer">${esc(v.name)}</a>
               </h3>
               <span class="card__badge">${esc(v.category)}</span>
             </div>
@@ -1026,7 +1037,7 @@
     <span class="footer__ornament">☽ ◆ ☾</span>
     <p>Made with darkness &amp; devotion for Freedom's Solar Return</p>
     <p style="margin-top:8px;">
-      <a href="https://github.com/geoffe-ga/freedom-solar-return" target="_blank" rel="noopener">View on GitHub</a>
+      <a href="https://github.com/geoffe-ga/freedom-solar-return" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </p>
   </footer>
 </body>

@@ -16,6 +16,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
+from urllib.parse import urlparse
 from html.parser import HTMLParser
 
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "venues.json"
@@ -53,8 +54,16 @@ class TitleParser(HTMLParser):
             self.title += data
 
 
+def _is_safe_url(url: str) -> bool:
+    """Reject URLs with non-HTTP(S) schemes to prevent SSRF."""
+    parsed = urlparse(url)
+    return parsed.scheme in ("http", "https") and bool(parsed.hostname)
+
+
 def http_get(url: str, headers: dict = None, timeout: int = 15) -> tuple:
     """Perform an HTTP GET request. Returns (status, body_bytes, error)."""
+    if not _is_safe_url(url):
+        return None, None, f"Blocked request to non-HTTP URL: {url}"
     hdrs = {
         "User-Agent": (
             "Mozilla/5.0 (compatible; FreedomSolarReturn/1.0; "
