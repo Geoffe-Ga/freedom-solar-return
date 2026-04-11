@@ -115,6 +115,49 @@ function renderSource(url) {
   return `<div class="card__source">Source: <a href="${esc(safe)}" target="_blank" rel="noopener noreferrer">${esc(display)}</a></div>`;
 }
 
+function renderFlights(flights) {
+  const legsHtml = flights.legs.map(leg => `
+    <div class="flight-leg">
+      <div class="flight-leg__direction">${esc(leg.direction)} \u00b7 ${esc(leg.date)}</div>
+      <div>
+        <div class="flight-leg__time">${esc(leg.departure_time)}</div>
+        <div class="flight-leg__airport">${esc(leg.departure_airport)}</div>
+      </div>
+      <div class="flight-leg__arrow"></div>
+      <div>
+        <div class="flight-leg__time">${esc(leg.arrival_time)}</div>
+        <div class="flight-leg__airport">${esc(leg.arrival_airport)}</div>
+      </div>
+      <div class="flight-leg__meta">
+        <span>${esc(leg.airline)} \u00b7 ${esc(leg.stops)} \u00b7 ${esc(leg.duration)}</span>
+        ${leg.emissions ? `<span class="flight-leg__tag">${esc(leg.emissions)}</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  return `
+  <section class="section" id="flights">
+    <div class="section__header">
+      <div class="section__icon">\u2708\uFE0F</div>
+      <div>
+        <h2 class="section__title">Flights</h2>
+        <p class="section__subtitle">Passage to the crescent city</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__header">
+        <h3 class="card__name">${esc(flights.route)}</h3>
+        <span class="card__badge">${esc(flights.cabin)}</span>
+      </div>
+      <div class="card__price">${esc(flights.price)} round trip</div>
+      ${legsHtml}
+      ${renderBooking(flights.booking)}
+      ${renderNote(flights.notes)}
+    </div>
+  </section>`;
+}
+
 function renderHotel(hotel) {
   const hours = hotel.hours;
   const hoursStr = hours
@@ -357,6 +400,7 @@ async function init() {
     const data = await resp.json();
 
     let html = '';
+    if (data.flights) html += renderFlights(data.flights);
     if (data.hotel) html += renderHotel(data.hotel);
     if (data.activities) html += renderActivities(data.activities);
     if (data.shopping) html += renderShopping(data.shopping);

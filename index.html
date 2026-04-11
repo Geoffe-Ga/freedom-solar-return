@@ -564,6 +564,83 @@
       .section__header { flex-direction: column; gap: 8px; }
     }
 
+    /* ─── FLIGHT LEG ─── */
+    .flight-leg {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .flight-leg + .flight-leg {
+      border-top: 1px solid rgba(42, 26, 58, 0.5);
+    }
+
+    .flight-leg__direction {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      width: 100%;
+      margin-bottom: -6px;
+    }
+
+    .flight-leg__time {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .flight-leg__arrow {
+      flex: 1;
+      min-width: 40px;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-rose));
+      position: relative;
+    }
+
+    .flight-leg__arrow::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid var(--accent-rose);
+      border-top: 1.5px solid var(--accent-rose);
+      transform: rotate(45deg);
+    }
+
+    .flight-leg__airport {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.06em;
+    }
+
+    .flight-leg__meta {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+
+    .flight-leg__tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      color: #4ade80;
+    }
+
     /* ─── LOADING ─── */
     .loading {
       display: flex;
@@ -630,6 +707,7 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav__inner">
+      <a href="#flights" class="nav__link">Flights</a>
       <a href="#hotel" class="nav__link">Lodging</a>
       <a href="#activities" class="nav__link">Activities</a>
       <a href="#shopping" class="nav__link">Shopping</a>
