@@ -82,6 +82,46 @@
       ]
     }
   },
+  "flights": {
+    "route": "San Francisco \u2194 New Orleans",
+    "passengers": 1,
+    "cabin": "Economy (Basic)",
+    "price": "$490+",
+    "booking": {
+      "platform": "United",
+      "book_url": "https://www.google.com/travel/flights/s/MijZkrMF7MDxdh8X9",
+      "type": "reservation_required",
+      "status": "available",
+      "last_checked": "2026-04-11T10:37:00.000000-07:00"
+    },
+    "legs": [
+      {
+        "direction": "Departing",
+        "date": "Wed, Jul 15, 2026",
+        "departure_time": "12:08 PM",
+        "arrival_time": "6:33 PM",
+        "departure_airport": "SFO",
+        "arrival_airport": "MSY",
+        "airline": "United",
+        "stops": "Nonstop",
+        "duration": "4 hr 25 min",
+        "emissions": "-25% emissions"
+      },
+      {
+        "direction": "Returning",
+        "date": "Sun, Jul 19, 2026",
+        "departure_time": "7:04 PM",
+        "arrival_time": "9:45 PM",
+        "departure_airport": "MSY",
+        "arrival_airport": "SFO",
+        "airline": "United",
+        "stops": "Nonstop",
+        "duration": "4 hr 41 min",
+        "emissions": "Avg emissions"
+      }
+    ],
+    "notes": "$490 is typical for Economy (including Basic). Seat selection requires upgrading to regular Economy (~$30\u201360 more round trip)."
+  },
   "hotel": {
     "name": "Hotel de la Poste \u2013 French Quarter, A Renaissance Hotel",
     "url": "https://www.marriott.com/en-us/hotels/msyrf-hotel-de-la-poste-french-quarter-a-renaissance-hotel/overview/",
