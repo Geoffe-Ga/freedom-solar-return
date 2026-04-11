@@ -11,6 +11,7 @@ Runs daily via GitHub Actions to:
 """
 
 import json
+import os
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -28,8 +29,8 @@ TRIP_DATES = [
 ]
 PARTY_SIZE = 2
 
-# Resy public API key (embedded in their web app, used by all public clients)
-RESY_API_KEY = "VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5"
+# Resy API key — read from environment variable (set via GitHub Actions secret)
+RESY_API_KEY = os.environ.get("RESY_API_KEY", "")
 
 
 class TitleParser(HTMLParser):
@@ -102,6 +103,10 @@ def check_resy_availability(slug: str, city: str, dates: list, party_size: int) 
         "total_slots": 0,
         "sample_slots": [],
     }
+
+    if not RESY_API_KEY:
+        print("    ⚠ RESY_API_KEY not set — skipping Resy availability check")
+        return result
 
     headers = {
         "Authorization": f'ResyAPI api_key="{RESY_API_KEY}"',
