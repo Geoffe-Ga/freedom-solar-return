@@ -1,12 +1,12 @@
 {
   "meta": {
-    "last_updated": "2026-08-22T00:31:00.549762-08:00",
+    "last_updated": "2026-08-23T00:31:11.207905-08:00",
     "trip_dates": "July 12\u201318, 2026",
     "birthday": "July 28, 2026",
     "destination": "New Orleans, Louisiana",
     "honoree": "Freedom",
     "health_check": {
-      "run_at": "2026-08-22T00:31:00.549762-08:00",
+      "run_at": "2026-08-23T00:31:11.207905-08:00",
       "all_ok": false,
       "results": [
         {
@@ -19,9 +19,9 @@
         {
           "name": "Ragin' Cajun Airboat Tours",
           "url": "https://ragincajunairboattours.com/",
-          "status": null,
+          "status": 403,
           "title": null,
-          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+          "error": "Forbidden"
         },
         {
           "name": "Museum of Death",
@@ -163,7 +163,7 @@
       "book_url": "https://www.marriott.com/en-us/hotels/msyrf-hotel-de-la-poste-french-quarter-a-renaissance-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979159e88d&fromDate=2026-07-12&toDate=2026-07-18",
       "type": "reservation_required",
       "status": "unknown",
-      "last_checked": "2026-08-22T00:31:00.549762-08:00"
+      "last_checked": "2026-08-23T00:31:11.207905-08:00"
     },
     "notes": "Only 97 rooms \u2014 intimate boutique feel. Jewel-toned bayou-inspired decor. Steps from Jackson Square & Bourbon St. The included Voodoo/Haunted History tour is a perfect fit for Freedom's aesthetic. Walkable location negates the need for a car."
   },
@@ -192,7 +192,7 @@
         "book_url": "https://fareharbor.com/embeds/book/ragincajuntours/items/date/2026-07-14/2026/07/?flow=940162&full-items=yes&ref=tours-airboat-tours-hero&back=https://ragincajunairboattours.com/tours/airboat-tours-new-orleans&g4=yes",
         "type": "reservation_required",
         "status": "available",
-        "last_checked": "2026-08-22T00:31:00.549762-08:00"
+        "last_checked": "2026-08-23T00:31:11.207905-08:00"
       },
       "notes": "100% private property tour deep in Louisiana swamps. July is prime gator season \u2014 sightings very likely. Weather-dependent with refund/reschedule policy."
     },
@@ -333,7 +333,7 @@
         "resy_city": "new-orleans-la",
         "type": "reservation_recommended",
         "status": "unknown",
-        "last_checked": "2026-08-22T00:31:00.549762-08:00",
+        "last_checked": "2026-08-23T00:31:11.207905-08:00",
         "slots": []
       },
       "notes": "Connected to Boutique du Vampyre. Herbs and flowers from their own courtyard garden. Many dishes have medicinal properties."
@@ -369,7 +369,7 @@
         "book_url": "https://www.exploretock.com/thecourtoftwosisters/search?date=2026-07-12&size=2&time=10:00",
         "type": "reservation_recommended",
         "status": "unknown",
-        "last_checked": "2026-08-22T00:31:00.549762-08:00"
+        "last_checked": "2026-08-23T00:31:11.207905-08:00"
       },
       "notes": "Historic French Quarter courtyard. Live jazz trio plays throughout brunch. A NOLA institution."
     }
